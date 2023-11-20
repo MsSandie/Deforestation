@@ -124,6 +124,3 @@ _CODE:_ ✍️
  WHERE INCOME_GROUP = 'HIGH INCOME'
  GROUP BY R.COUNTRY_NAME, INCOME_GROUP ORDER BY TOTAL_FOREST_AREA DESC;
 <button class="btn" data-clipboard-target="#sqlQuery">
-  
-
-
