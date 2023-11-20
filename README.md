@@ -116,11 +116,3 @@ _CODE:_ ✍️
 **_Question 4:_ Determine the total forest area in square km for countries in the 'high income' group. Compare the result with the rest of the income categories.**
 
 This is very similar to the previous question, only that it involves anothe table. Here, I made use of aggregate function SUM, together with the SELECT FROM and WHERE functions. I also used the Inner Join as the values were in different tables. I also made use of the GROUP BY clause to group my columns. Finally, I compared the results derived from the 'High Income' with results from other regions in our data.
-
-_CODE:_ ✍️
-<pre><code id="sqlQuery"> SELECT R.COUNTRY_NAME, INCOME_GROUP, SUM(FOREST_AREA_SQKM) AS TOTAL_FOREST_AREA
- FROM REGIONS R 
- JOIN FOREST_AREA F ON R.COUNTRY_NAME = F.COUNTRY_NAME 
- WHERE INCOME_GROUP = 'HIGH INCOME'
- GROUP BY R.COUNTRY_NAME, INCOME_GROUP ORDER BY TOTAL_FOREST_AREA DESC;
-<button class="btn" data-clipboard-target="#sqlQuery">
